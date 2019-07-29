@@ -1,0 +1,37 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 395dc760308a10afaa4cdfc601f5f2ce443537982eee9a1b9c847b33b456232f
+
+name:           monoid
+version:        0.1.7
+synopsis:       Monoid type classes, designed in modular way, distinguish Monoid from Mempty and Semigroup. This design allows mempty operation don't bring Semigroups related constraints until (<>) is used.
+category:       Data
+stability:      stable
+homepage:       https://github.com/luna/monoid
+bug-reports:    https://github.com/luna/monoid/issues
+author:         Wojciech Danilo
+maintainer:     Wojciech Danilo <wojciech.danilo@gmail.com>
+copyright:      Copyright (C) 2017 Wojciech Danilo
+license:        Apache-2.0
+license-file:   LICENSE
+build-type:     Simple
+
+library
+  exposed-modules:
+      Data.Monoids
+  other-modules:
+      Paths_monoid
+  hs-source-dirs:
+      src
+  default-extensions: ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DoAndIfThenElse EmptyDataDecls FlexibleContexts FlexibleInstances GeneralizedNewtypeDeriving InstanceSigs LambdaCase MultiParamTypeClasses NoImplicitPrelude OverloadedStrings StandaloneDeriving TemplateHaskell TupleSections TypeOperators ViewPatterns TypeFamilies
+  ghc-options: -Wall -O2
+  build-depends:
+      base
+    , containers
+    , lens
+    , mtl
+  default-language: Haskell2010
